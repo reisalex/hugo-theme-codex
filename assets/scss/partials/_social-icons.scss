@@ -16,4 +16,10 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+
+  .social-icons__icon:hover {
+  filter: invert(100%) url('#colorFilter');
+  }
+
 }
+

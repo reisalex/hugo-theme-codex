@@ -1,5 +1,5 @@
 {{ $currentPage := . }}
-{{ $icons := .Site.Params.iconOrder | default (slice "Twitter" "GitHub" "Email" "Facebook" "GitLab" "Instagram" "LinkedIn" "YouTube") }}
+{{ $icons := .Site.Params.iconOrder | default (slice "Twitter" "GitHub" "Email" "Facebook" "GitLab" "Instagram" "LinkedIn" "YouTube" "GoogleScholar") }}
 
 <div class="social-icons">
   {{ range $icons }}
@@ -13,3 +13,17 @@
     {{ end }}
   {{ end }}   
 </div>
+
+<svg id="svg">
+  <defs>
+    <filter id="colorFilter">
+      <feColorMatrix 
+        color-interpolation-filters="sRGB"
+        type="matrix"
+        values="0.92 0   0   0   0
+                0   0.20  0   0   0
+                0   0   0.20  0   0
+                0   0   0   1   0 "/>
+    </filter>
+  </defs>
+</svg>
